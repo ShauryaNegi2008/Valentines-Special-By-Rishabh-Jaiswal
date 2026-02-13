@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Date</title>
-    <link rel="stylesheet" href="css/date.css" />
-  </head>
-  <body>
-    <h1 title="choose a date">Are you free on ...</h1>
-    <form class="form-group">
-      <label>Which day: (select a date cuite.. )</label>
-      <div>
-        <input type="date" />
-        <button class="button" type="submit" formaction="food.html">
-          Submit
-        </button>
-      </div>
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffe6f0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      margin-top: 70px;
+    }
+
+    .photo {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .message {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      padding: 10px 25px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      background-color: #ff6b9e;
+      color: white;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #ff4f87;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    
+    <!-- Change this to your uploaded photo name -->
+    <img src="photo1.png" class="photo">
+
+    <p class="message">
+      This is where you write something cute…  
+      Something soft. Something real.  
+      Make it personal.
+    </p>
+
+    <button class="next-btn" onclick="location.href='memory2.html'">
+      Next →
+    </button>
+
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
 </html>

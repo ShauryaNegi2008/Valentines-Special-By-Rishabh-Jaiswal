@@ -19,9 +19,11 @@
 
 <script>
   const noBtn = document.getElementById("noButton");
+  const yesBtn = document.querySelector('button[onclick*="thankyou.html"]');
   const image = document.getElementById("slideshowImage");
 
   let noClickCount = 0;
+  let imageIndex = 0;
 
   const messages = [
     "Are you sureee? 🤨",
@@ -36,22 +38,21 @@
   ];
 
   const images = ["1.png", "2.png", "3.png"];
-  let imageIndex = 0;
 
   noBtn.addEventListener("click", function () {
 
     // Change text
-    if (noClickCount < messages.length) {
-      noBtn.innerText = messages[noClickCount];
-    } else {
-      noBtn.innerText = messages[noClickCount % messages.length];
-    }
-
+    noBtn.innerText = messages[noClickCount % messages.length];
     noClickCount++;
+
+    // Grow Yes button
+    let currentSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
+    yesBtn.style.fontSize = (currentSize + 6) + "px";
 
     // Change image
     imageIndex = (imageIndex + 1) % images.length;
     image.src = images[imageIndex];
   });
 </script>
+
 
